@@ -2,7 +2,7 @@
 We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languages: AR, EN, ES, DE, FA, JA, TA, TR, and TH. Our experimental results in the research paper demonstrated that mReFinED outperformed the best existing work in the end-to-end MEL task while being 44 times faster compared to existing state-of-the-art (mGENRE).
 
 ## mReFinED
-- This is the replica of mReFinED from [Amazon's ReFinED](https://github.com/amazon-science/ReFinED/tree/mrefined).
+- This is the replica of mReFinED from [Amazon's mReFinED](https://github.com/amazon-science/ReFinED/tree/mrefined).
 - In contrast to mReFinED's paper, we add the Thai language.  
 - We improve the training and inference codes to make them easier to reproduce.
 - We also provide the mReFinED model and training data :) 
