@@ -18,7 +18,7 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 - **Model**: XXXXXXX
 - **Training data**: XXXXXXXX
 - 
-## Example
+## Example Script
 - Training:
 ```python
 print('hi')
@@ -39,9 +39,6 @@ The mReFinED model architecture is described in the paper below (https://aclanth
       Christodoulopoulos, Christos  and
       Saffari, Amir  and
       Lehmann, Jens",
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
     booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
     month = dec,
     year = "2023",
