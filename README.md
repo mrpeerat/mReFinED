@@ -5,7 +5,7 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 - This is the replica of mReFinED from [Amazon's ReFinED](https://github.com/amazon-science/ReFinED/tree/mrefined).
 - In contrast to mReFinED's paper, we add the Thai language.  
 - We improve the training and inference codes to make them easier to reproduce.
-- We also provide the mReFinED model
+- We also provide the mReFinED model and training data :) 
 
 ## Hardware Requirements
 mReFinED has a low hardware requirement. For fast inference speed, a GPU should be used, but this is not a strict requirement. 
