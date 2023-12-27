@@ -8,9 +8,28 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 - We also provide the mReFinED model and training data :) 
 
 ## Hardware Requirements
-mReFinED has a low hardware requirement. For fast inference speed, a GPU should be used, but this is not a strict requirement. 
+- mReFinED has a low hardware requirement. For fast inference speed, a GPU should be used, but this is not a strict requirement.
+- We use 8 V100 in the training step for ~10 days.
+- For the inference setting, we use only a single V100.
 
-## mReFinED Paper
+# Model, Data, and Codes
+
+## Materials
+- **Model**: XXXXXXX
+- **Training data**: XXXXXXXX
+- 
+## Example
+- Training:
+```python
+print('hi')
+```
+- Inference:
+```python
+print('hi')
+```
+
+
+# mReFinED Paper
 The mReFinED model architecture is described in the paper below (https://aclanthology.org/2023.findings-emnlp.1007):
 ```bibtex
 @inproceedings{limkonchotiwat-etal-2023-mrefined,
@@ -31,8 +50,6 @@ The mReFinED model architecture is described in the paper below (https://aclanth
     url = "https://aclanthology.org/2023.findings-emnlp.1007",
     doi = "10.18653/v1/2023.findings-emnlp.1007",
     pages = "15080--15089",
-    abstract = "End-to-end multilingual entity linking (MEL) is concerned with identifying multilingual entity mentions and their corresponding entity IDs in a knowledge base. Existing works assumed that entity mentions were given and skipped the entity mention detection step due to a lack of high-quality multilingual training corpora. To overcome this limitation, we propose mReFinED, the first end-to-end multilingual entity linking. Additionally, we propose a bootstrapping mention detection framework that enhances the quality of training corpora. Our experimental results demonstrated that mReFinED outperformed the best existing work in the end-to-end MEL task while being 44 times faster.",
-}
 ```
  
 ## Security
