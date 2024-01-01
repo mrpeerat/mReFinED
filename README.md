@@ -20,22 +20,29 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 - **Training data**: XXXXXXXX
 
 ## Example Script
-- Creating training data:
+- mReFinED: Creating training data
 ```
 cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
 python refined/offline_data_generation/preprocess_all_multilingual_combine.py
 ```
-- Training:
+- mReFinED: Training
 ```
 cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
 bash refined/training/train/multilingual_train.sh
 ```
-- Inference:
+- mReFinED: Inference
 ```python
 print('hi')
 ```
+- Mention Detection For Unlabeled Entity in Wikipedia
+```
+cd mReFinED/src/refined/training/train
+python multilingual_md_train_xtreme.py
+python md_on_wiki.py
+python multilingual_md_train_xtreme_wikipedia.py
+```  
 
 
 # mReFinED Paper
