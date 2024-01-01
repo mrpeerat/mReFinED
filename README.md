@@ -24,13 +24,13 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 ```
 cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
-```
-```python
 python refined/offline_data_generation/preprocess_all_multilingual_combine.py
 ```
 - Training:
-```python
-print('hi')
+```
+cd mReFinED/src/
+export PYTHONPATH=$PYTHONPATH:src
+bash refined/training/train/multilingual_train.sh
 ```
 - Inference:
 ```python
