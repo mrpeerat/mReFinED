@@ -9,6 +9,7 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 
 ## Hardware Requirements
 - mReFinED has a low hardware requirement. For fast inference speed, a GPU should be used, but this is not a strict requirement.
+- We create training data for 15 days (CPU only).
 - We use 8 V100 in the training step for ~10 days.
 - For the inference setting, we use only a single V100.
 
@@ -17,8 +18,16 @@ We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languag
 ## Materials
 - **Model**: XXXXXXX
 - **Training data**: XXXXXXXX
-- 
+
 ## Example Script
+- Creating training data:
+```
+cd mReFinED/src/
+export PYTHONPATH=$PYTHONPATH:src
+```
+```python
+python refined/offline_data_generation/preprocess_all_multilingual_combine.py
+```
 - Training:
 ```python
 print('hi')
