@@ -52,16 +52,20 @@ cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
 bash refined/training/train/multilingual_train.sh
 ```
-- mReFinED: Inference
-```python
-print('hi')
-```
 - Mention Detection For Unlabeled Entity in Wikipedia
 ```
 cd mReFinED/src/refined/training/train
 python multilingual_md_train_xtreme.py
 python md_on_wiki.py
 python multilingual_md_train_xtreme_wikipedia.py
+```
+- mReFinED: Inference
+```python
+print('hi')
+```
+- mReFinED on Mewsli-9
+```python
+print('hi')
 ```  
  
 ## Security
