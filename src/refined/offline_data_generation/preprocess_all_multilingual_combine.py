@@ -1,11 +1,12 @@
 # This is a script that does all the data pre-processing necessary to generate the data needed to
 # train a new ReFinED ER model from scratch.
 # Data files are written for intermediate steps so work will resume if the script is restarted.
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 import copy
 import json
 import logging
-import os
+# import os
 import subprocess
 import sys
 from argparse import ArgumentParser
@@ -157,7 +158,7 @@ def main():
                     help="e.g., en_es_de_XX_XX_XX")
     parser.add_argument("--gpus",
                     type=int,
-                    default=2,
+                    default=1,
                     required=False,
                     help="the number of GPUs for mention detection")
     
@@ -178,20 +179,20 @@ def main():
     
     LOG.info(f'Languages:{languages}')
     
-#     LOG.info('Step 0) Downloading the raw data for Wikidata')
-#     if not os.path.exists(os.path.join(OUTPUT_PATH, 'wikidata.json.bz2')):
-#         download_url_with_progress_bar(WIKIDATA_DUMP_URL, os.path.join(OUTPUT_PATH, WIKIDATA_DUMP_FILE))
+    LOG.info('Step 0) Downloading the raw data for Wikidata')
+    if not os.path.exists(os.path.join(OUTPUT_PATH, 'wikidata.json.bz2')):
+        download_url_with_progress_bar(WIKIDATA_DUMP_URL, os.path.join(OUTPUT_PATH, WIKIDATA_DUMP_FILE))
 
-#     LOG.info('Step 1) Downloading the raw data for Wikipedia.')
-#     for lang in languages:
-#         if not os.path.exists(os.path.join(f"{OUTPUT_PATH}/{lang}", f'wikipedia_articles_{languages[0]}.xml.bz2')):
-#             download_dumps([lang])
+    LOG.info('Step 1) Downloading the raw data for Wikipedia.')
+    for lang in languages:
+        if not os.path.exists(os.path.join(f"{OUTPUT_PATH}/{lang}", f'wikipedia_articles_{languages[0]}.xml.bz2')):
+            download_dumps([lang])
 
-#     LOG.info('Step 2) Processing Wikidata dump to build lookups and sets.')
-#     args = {'dump_file_path': os.path.join(OUTPUT_PATH, WIKIDATA_DUMP_FILE),
-#         'output_dir': f"{OUTPUT_PATH}", 'overwrite_output_dir': True, 'test': False}
-#     if not os.path.exists(os.path.join(f"{OUTPUT_PATH}", 'sitelinks_cnt_.json')):
-#         build_wikidata_lookups(languages,args_override=args)
+    LOG.info('Step 2) Processing Wikidata dump to build lookups and sets.')
+    args = {'dump_file_path': os.path.join(OUTPUT_PATH, WIKIDATA_DUMP_FILE),
+        'output_dir': f"{OUTPUT_PATH}", 'overwrite_output_dir': True, 'test': False}
+    if not os.path.exists(os.path.join(f"{OUTPUT_PATH}", 'sitelinks_cnt_.json')):
+        build_wikidata_lookups(languages,args_override=args)
 
     LOG.info('Step 3) Processing Wikipedia redirects dump.')
     args = {'page_sql_gz_filepath': os.path.join(OUTPUT_PATH, WIKIPEDIA_PAGE_IDS_FILE),
