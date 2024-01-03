@@ -19,6 +19,7 @@ The mReFinED model architecture is described in the paper below (https://aclanth
     url = "https://aclanthology.org/2023.findings-emnlp.1007",
     doi = "10.18653/v1/2023.findings-emnlp.1007",
     pages = "15080--15089",
+}
 ```
 
 ## mReFinED
