@@ -62,4 +62,7 @@ Thumbs.db
 *.cpython-37.pyc
 
 # training data
-src/data*
+src/data* 
+src/ReFinED_mBERT_11_languages_temp0.02_training_output.txt 
+src/mewsli_9_el_datasets/
+

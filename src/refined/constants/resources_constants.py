@@ -64,8 +64,8 @@ DATA_FILES_WIKIDATA = {
     },
     "qcode_idx_to_class_idx": {
         "s3_bucket": s3_resource_bucket,
-        "s3_key": s3_resource_prefix + "wikidata_data/qcode_to_class_tns_38520582-122.np",
-        "local_filename": "wikidata_data/qcode_to_class_tns_38520582-122.np",  
+        "s3_key": s3_resource_prefix + "wikidata_data/qcode_to_class_tns_42508135-143.np",
+        "local_filename": "wikidata_data/qcode_to_class_tns_42508135-143.np",  
         "needed_for_inference": True
     },
 
@@ -157,8 +157,8 @@ DATA_FILES_WIKIPEDIA = {
     },
     "qcode_idx_to_class_idx": {
         "s3_bucket": s3_resource_bucket,
-        "s3_key": s3_resource_prefix + "wikipedia_data/qcode_to_class_tns_9050844-117.np",
-        "local_filename": "wikipedia_data/qcode_to_class_tns_9050844-117.np",
+        "s3_key": s3_resource_prefix + "wikipedia_data/qcode_to_class_tns_42508135-143.np",
+        "local_filename": "wikipedia_data/qcode_to_class_tns_42508135-143.np",
         "needed_for_inference": True
     },
     "subclasses": {
@@ -208,14 +208,14 @@ WIKIPEDIA_MODEL = {
         "wikipedia": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "wikipedia_model/precomputed_entity_descriptions_emb_wikipedia_6269457-300.np",
-            "local_filename": "wikipedia_model/precomputed_entity_descriptions_emb_wikipedia_6269457-300.np",
+                      "wikipedia_model/precomputed_entity_descriptions_emb_wikipedia_42508135-143.np",
+            "local_filename": "wikipedia_model/precomputed_entity_descriptions_emb_wikipedia_42508135-143.np",
         },
         "wikidata": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "wikipedia_model/precomputed_entity_descriptions_emb_wikidata_33831487-300.np",
-            "local_filename": "wikipedia_model/precomputed_entity_descriptions_emb_wikidata_33831487-300.np"
+                      "wikipedia_model/precomputed_entity_descriptions_emb_wikidata_42508135-143.np",
+            "local_filename": "wikipedia_model/precomputed_entity_descriptions_emb_wikidata_42508135-143.np"
         }
     }
 }
@@ -265,15 +265,15 @@ AIDA_MODEL = {
         "wikipedia": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikipedia_6269457-300.np",
-            "local_filename": "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikipedia_6269457-300"
+                      "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikipedia_42508135-143.np",
+            "local_filename": "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikipedia_42508135-143"
                               ".np",
         },
         "wikidata": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikidata_33831487-300.np",
-            "local_filename": "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikidata_33831487-300"
+                      "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikidata_42508135-143.np",
+            "local_filename": "fine_tuned_models/aida_fine_tuned_el/precomputed_entity_descriptions_emb_wikidata_42508135-143"
                               ".np",
         }
     }
@@ -295,15 +295,15 @@ QUESTIONS_MODEL = {
         "wikipedia": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikipedia_6269457-300.np",
-            "local_filename": "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikipedia_6269457-300"
+                      "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikipedia_42508135-143.np",
+            "local_filename": "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikipedia_42508135-143"
                               ".np",
         },
         "wikidata": {
             "s3_bucket": s3_resource_bucket,
             "s3_key": s3_resource_prefix +
-                      "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikidata_33831487-300.np",
-            "local_filename": "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikidata_33831487-300"
+                      "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikidata_42508135-143.np",
+            "local_filename": "fine_tuned_models/web_qsp_el/precomputed_entity_descriptions_emb_wikidata_42508135-143"
                               ".np",
         }
     }

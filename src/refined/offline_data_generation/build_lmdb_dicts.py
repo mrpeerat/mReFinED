@@ -79,6 +79,16 @@ def build_lmdb_dicts(preprocess_all_data_dir: str, keep_all_entities: bool):
     LmdbImmutableDict.from_dict(wiki_to_qcode, output_file_path=additional_data_files["wiki_to_qcode"])
     qcode_to_label = load_labels(os.path.join(preprocess_all_data_dir, 'qcode_to_label.json'))
     LmdbImmutableDict.from_dict(qcode_to_label, output_file_path=additional_data_files["qcode_to_label"])
+    
+    for resource_name, data_file in resource_manager.get_data_files_info().items():
+        if resource_name in {
+            "nltk_sentence_splitter_english",
+        }:
+            resource_manager.s3_manager.download_file_if_needed(
+                s3_bucket=data_file["s3_bucket"],
+                s3_key=data_file["s3_key"],
+                output_file_path=data_file["local_filename"],
+            )
 
     print(f"Data is now contained in {preprocess_all_data_dir}/organised_data_dir/ which can be used by the "
           f"`PreprocessorInferenceOnly` class and `ResourceManager` class")
