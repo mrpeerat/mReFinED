@@ -29,7 +29,7 @@ The mReFinED model architecture is described in the paper below (https://aclanth
 
 ## Hardware Requirements
 - mReFinED has a low hardware requirement. For fast inference speed, a GPU should be used, but this is not a strict requirement.
-- We create training data for 15 days (CPU only).
+- We create training data for 15 days (CPU only). However, the process can be sped up using GPUs (~2 days).
 - We use 8 V100 in the training step for ~10 days.
 - For the inference setting, we use only a single V100.
 
@@ -52,16 +52,20 @@ cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
 bash refined/training/train/multilingual_train.sh
 ```
-- mReFinED: Inference
-```python
-print('hi')
-```
 - Mention Detection For Unlabeled Entity in Wikipedia
 ```
 cd mReFinED/src/refined/training/train
 python multilingual_md_train_xtreme.py
 python md_on_wiki.py
 python multilingual_md_train_xtreme_wikipedia.py
+```
+- mReFinED: Inference
+```python
+print('hi')
+```
+- mReFinED on Mewsli-9
+```python
+print('hi')
 ```  
  
 ## Security
