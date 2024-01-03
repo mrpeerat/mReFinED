@@ -153,7 +153,7 @@ def main():
                         help="y or n", )
     parser.add_argument("--languages",
                     type=str,
-                    default='ar_de_es_fa_ja_sr_ta_tr_th_en',
+                    default='ar_de_es_fa_ja_sr_ta_tr_en',
                     required=False,
                     help="e.g., en_es_de_XX_XX_XX")
     parser.add_argument("--gpus",

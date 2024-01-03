@@ -27,7 +27,7 @@ class TrainingArgs:
     gradient_accumulation_steps: int = 1
     epochs: int = 2
     lr: float = 5e-5
-    batch_size: int = 1  # 64 uses around 40 GB++, 32 uses 22 GB
+    batch_size: int = 8  # 64 uses around 40 GB++, 32 uses 22 GB
     ed_threshold: float = 0.15
     num_warmup_steps: int = 10
     num_candidates_train: int = 30

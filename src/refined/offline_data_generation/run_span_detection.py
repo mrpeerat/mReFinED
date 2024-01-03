@@ -115,6 +115,7 @@ def add_spans(aligned_wiki_file: str, output_dir: str, device: str, start_line: 
                     line = json.loads(line)
                     spans = md.process_text(line['text'])
                     line['predicted_spans'] = spans
+                    raise Exception(spans)
                     output_file.write(json.dumps(line) + '\n')
                 if line_num > end_line:
                     break

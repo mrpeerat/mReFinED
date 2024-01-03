@@ -1,3 +1,4 @@
+src/fine_tuned_models/
 # PyCharm #
 *.iml
 .idea/
