@@ -1,5 +1,5 @@
 # Overview
-We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languages: AR, EN, ES, DE, FA, JA, TA, TR, and TH. Our experimental results in the research paper demonstrated that mReFinED outperformed the best existing work in the end-to-end MEL task while being 44 times faster compared to existing state-of-the-art (mGENRE).
+We propose mReFinED, the first end-to-end MEL model. mReFinED supports 9 languages: AR, EN, ES, DE, FA, JA, TA, and TR. Our experimental results in the research paper demonstrated that mReFinED outperformed the best existing work in the end-to-end MEL task while being 44 times faster compared to existing state-of-the-art (mGENRE).
 
 # mReFinED's Paper
 The mReFinED model architecture is described in the paper below (https://aclanthology.org/2023.findings-emnlp.1007):
@@ -23,7 +23,6 @@ The mReFinED model architecture is described in the paper below (https://aclanth
 
 ## mReFinED
 - This is the replica of mReFinED from [Amazon's mReFinED](https://github.com/amazon-science/ReFinED/tree/mrefined).
-- In contrast to mReFinED's paper, we add the Thai language.  
 - We improve the training and inference codes to make them easier to reproduce.
 - We also provide the mReFinED model and training data :) 
 
@@ -52,7 +51,7 @@ cd mReFinED/src/
 export PYTHONPATH=$PYTHONPATH:src
 bash refined/training/train/multilingual_train.sh
 ```
-- Mention Detection For Unlabeled Entity in Wikipedia
+- Mention Detection For Unlabeled Entity in Wikipedia. However, we can skip this step using [WikiNN](https://huggingface.co/Babelscape/wikineural-multilingual-ner) instead.
 ```
 cd mReFinED/src/refined/training/train
 python multilingual_md_train_xtreme.py
